@@ -75,12 +75,48 @@ public class UserDAO implements UserInterface {
 
     @Override
     public boolean userUpdate(UserModel user) {
-        return false;
+
+        boolean update = false;
+
+        String sql = "UPDATE users SET identification='" + user.getIdentification() + "',firstName='" +
+                user.getFirstName() + "',lastName='" + user.getLastName() + "' WHERE id=" + user.getId();
+
+        try {
+            con = DBConnection.connect();
+            stm = con.createStatement();
+            stm.execute(sql);
+            update = true;
+            stm.close();
+            con.close();
+
+        } catch (SQLException ex) {
+            System.out.println("Update to user failed");
+            ex.printStackTrace();
+        }
+
+        return update;
     }
 
     @Override
     public boolean userDestroy(UserModel user) {
-        return false;
+
+        boolean destroy = false;
+        String sql = "DELETE FROM users WHERE id=" + user.getId() + "";
+
+        try {
+            con = DBConnection.connect();
+            stm = con.createStatement();
+            stm.execute(sql);
+
+            stm.close();
+            con.close();
+
+        } catch (SQLException ex) {
+            System.out.println("Destroy to user dailed");
+            ex.printStackTrace();
+        }
+
+        return destroy;
     }
 
 }

@@ -28,5 +28,14 @@ public class UserController {
 
     }
 
+    public void updateUser(UserModel user) {
+        UserDAO dao = new UserDAO();
+        dao.userUpdate(user);
+    }
+
+    public void destroyUser(UserModel user) {
+        UserDAO dao = new UserDAO();
+        dao.userDestroy(user);
+    }
 
 }

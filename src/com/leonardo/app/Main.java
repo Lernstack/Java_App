@@ -4,15 +4,13 @@ package com.leonardo.app;
 import com.leonardo.app.Controllers.UserController;
 import com.leonardo.app.Models.UserModel;
 
-import java.util.List;
-
 public class Main {
     public static void main(String[] args) {
 
         UserController user = new UserController();
         UserModel userM = new UserModel();
-        /*
-        for (int i = 0; i < 500; i++) {
+/*
+        for (int i = 0; i < 1500; i++) {
             int min = 1;
             int max = 5000;
             int range = max - min + 1;
@@ -25,11 +23,14 @@ public class Main {
 
             user.storeUser(userM);
         }
-        */
+*/
 
-
+/*
         user.showUser();
+*/
+        userM.setId(1);
 
 
+        user.destroyUser(userM);
     }
 }
