@@ -1,6 +1,5 @@
 package com.leonardo.app;
 
-
 import com.leonardo.app.Controllers.UserController;
 import com.leonardo.app.Models.UserModel;
 
@@ -25,12 +24,12 @@ public class Main {
         }
 */
 
-/*
+
         user.showUser();
-*/
+/*
         userM.setId(1);
 
-
         user.destroyUser(userM);
+ */
     }
 }

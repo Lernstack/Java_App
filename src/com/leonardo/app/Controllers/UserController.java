@@ -1,6 +1,5 @@
 package com.leonardo.app.Controllers;
 
-
 import com.leonardo.app.DAO.UserDAO;
 import com.leonardo.app.Models.UserModel;
 

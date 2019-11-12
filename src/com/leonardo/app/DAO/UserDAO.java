@@ -112,7 +112,7 @@ public class UserDAO implements UserInterface {
             con.close();
 
         } catch (SQLException ex) {
-            System.out.println("Destroy to user dailed");
+            System.out.println("Destroy to user failed");
             ex.printStackTrace();
         }
 
